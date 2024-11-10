@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Restaurante
+build_property.RootNamespace = Restaurante
+build_property.ProjectDir = C:\Users\Gerardo\source\repos\Restaurante\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Gerardo\source\repos\Restaurante
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Home/Contacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Plato/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Plato/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Plato/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Plato/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Plato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gerardo/source/repos/Restaurante/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rtbghfn6lq
