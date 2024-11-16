@@ -1,47 +1,59 @@
 ﻿@model IEnumerable<Restaurante.Models.Plato>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Nuestros Platos";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre_Plato)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Observacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre_Plato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PlatoId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PlatoId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PlatoId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class=" mt-0"><h1>Platos</h1></h2>
+                <hr class="divider divider-light" />
+                <p class="text-white-75 mb-4">A continuación la lista de los platos que tenemos disponibles y la gestión de los mismos</p>
+                <a class="btn btn-light btn-xl" asp-action="Create">Agregar uno nuevo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <h3>Nuestros platos</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre_Plato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Observacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Precio)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_Plato)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PlatoId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.PlatoId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PlatoId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
