@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Restaurante.Models.Mesa>
+
+@{
+    ViewData["Title"] = "Mesas";
+}
+
+
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="text-white mt-0">Gestión de Mesas</h1>
+                <hr class="divider divider-light" />
+                <a class="btn btn-light btn-xl" asp-action="Crear">Agregar una nueva</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <br>
+    <h3>Lista de Mesas</h3>
+    <br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroMesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroMesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacidad)
+                personas
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MesaId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.MesaId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.MesaId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

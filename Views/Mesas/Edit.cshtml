@@ -1,0 +1,58 @@
+﻿@model Restaurante.Models.Mesa
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<section class="page-section bg-primary">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="text-white mt-0">Editar Mesa</h1>
+                <hr class="divider divider-light" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <br />
+    <h4>Modificar Mesa @Html.DisplayFor(model => model.NumeroMesa)</h4>
+    <hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MesaId" />
+            <div class="form-group">
+                <label asp-for="NumeroMesa" class="control-label"></label>
+                <input asp-for="NumeroMesa" class="form-control" />
+                <span asp-validation-for="NumeroMesa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capacidad" class="control-label"></label>
+                <input asp-for="Capacidad" class="form-control" />
+                <span asp-validation-for="Capacidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                    <select asp-for="Estado" class="form-control">
+                        <option value="Libre">Libre</option>
+                        <option value="Ocupada">Ocupada</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</div>

@@ -9,4 +9,6 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Plato> Platos { get; set; }
+    public DbSet<Mesa> Mesas { get; set; }
+    public DbSet<Orden> Ordenes { get; set; }
 }

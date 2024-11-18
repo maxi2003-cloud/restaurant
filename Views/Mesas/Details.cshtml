@@ -1,0 +1,50 @@
+﻿@model Restaurante.Models.Mesa
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<section class="page-section bg-primary">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="text-white mt-0">Detalles de Mesa</h1>
+                <hr class="divider divider-light" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <br />
+    <h4>Detalles de Mesa @Html.DisplayFor(model => model.NumeroMesa)</h4>
+    <hr />
+<div>
+    <h4>Mesa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroMesa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeroMesa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+        <dt class = "col-sm-2">
+            Estado actual
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MesaId">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+</div>

@@ -15,10 +15,59 @@ namespace Restaurante.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+
+            modelBuilder.Entity("Restaurante.Models.Mesa", b =>
+                {
+                    b.Property<int>("MesaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("MesaId"));
+
+                    b.Property<int>("Capacidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("NumeroMesa")
+                        .HasColumnType("int");
+
+                    b.HasKey("MesaId");
+
+                    b.ToTable("Mesas");
+                });
+
+            modelBuilder.Entity("Restaurante.Models.Orden", b =>
+                {
+                    b.Property<int>("OrdenId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("OrdenId"));
+
+                    b.Property<int>("MesaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PlatoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("cantidad")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrdenId");
+
+                    b.HasIndex("MesaId");
+
+                    b.HasIndex("PlatoId");
+
+                    b.ToTable("Ordenes");
+                });
 
             modelBuilder.Entity("Restaurante.Models.Plato", b =>
                 {
@@ -42,6 +91,25 @@ namespace Restaurante.Migrations
                     b.HasKey("PlatoId");
 
                     b.ToTable("Platos");
+                });
+
+            modelBuilder.Entity("Restaurante.Models.Orden", b =>
+                {
+                    b.HasOne("Restaurante.Models.Mesa", "Mesa")
+                        .WithMany()
+                        .HasForeignKey("MesaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Restaurante.Models.Plato", "Plato")
+                        .WithMany()
+                        .HasForeignKey("PlatoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Mesa");
+
+                    b.Navigation("Plato");
                 });
 #pragma warning restore 612, 618
         }

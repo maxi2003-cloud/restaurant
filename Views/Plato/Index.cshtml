@@ -9,7 +9,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class=" mt-0"><h1>Platos</h1></h2>
+                <h1 class="text-white mt-0">Platos</h1>
                 <hr class="divider divider-light" />
                 <p class="text-white-75 mb-4">A continuación la lista de los platos que tenemos disponibles y la gestión de los mismos</p>
                 <a class="btn btn-light btn-xl" asp-action="Create">Agregar uno nuevo</a>
@@ -19,7 +19,9 @@
 </section>
 
 <div class="container">
+    <br>
     <h3>Nuestros platos</h3>
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -32,7 +34,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Precio)
                 </th>
-                <th></th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -48,9 +50,9 @@
                     @Html.DisplayFor(modelItem => item.Precio)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.PlatoId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.PlatoId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.PlatoId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.PlatoId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.PlatoId">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PlatoId">Eliminar</a>
                 </td>
             </tr>
     }

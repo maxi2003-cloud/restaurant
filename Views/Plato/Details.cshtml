@@ -1,10 +1,25 @@
 ﻿@model Restaurante.Models.Plato
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
 }
 
-<h1>Details</h1>
+
+<section class="page-section bg-primary">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="text-white mt-0">@Html.DisplayFor(model => model.Nombre_Plato)</h1>
+                <hr class="divider divider-light" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <br>
+    <h2>Detalle del plato</h2>
 
 <div>
     <h4>Plato</h4>
@@ -31,6 +46,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.PlatoId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.PlatoId">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>
 </div>

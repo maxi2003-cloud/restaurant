@@ -1,14 +1,27 @@
 ﻿@model Restaurante.Models.Plato
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar";
 }
 
-<h1>Delete</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+
+<section class="page-section bg-primary">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="text-white mt-0">Eliminar @Html.DisplayFor(model => model.Nombre_Plato)</h1>
+                <hr class="divider divider-light" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <br>
+    <h3>¿Está seguro de eliminar el plato @Html.DisplayFor(model => model.Nombre_Plato)?</h3>
 <div>
-    <h4>Plato</h4>
+    
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -33,7 +46,8 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="PlatoId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
     </form>
+</div>
 </div>
